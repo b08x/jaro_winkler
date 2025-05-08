@@ -1,3 +1,4 @@
+#include "stdbool.h"
 #include "codepoints.h"
 #include "jaro.h"
 #include "ruby.h"
