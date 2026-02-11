@@ -1,3 +1,7 @@
+## 1.7.0 (2026-02-11)
+
+* Allow compiling the gem with MSVC (which is not C99 compliant) ([1c80dbf](https://github.com/tonytonyjan/jaro_winkler/commit/1c80dbf))
+
 ## 1.6.1 (2025-05-11)
 
 * chore: use "similarity" methods over deprecated "distance" methods for rake tasks ([b8bbec0](https://github.com/tonytonyjan/jaro_winkler/commit/b8bbec0))
