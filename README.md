@@ -54,7 +54,12 @@ adj_table   | boolean | false   | The option is used to give partial credit for 
 
 Original Formula:
 
-![origin](https://chart.googleapis.com/chart?cht=tx&chs&chl=%5Cbegin%7Bcases%7D0%26%7B%5Ctext%7Bif%20%7Dm%3D0%7D%5C%5C%5Cfrac%7B1%7D%7B3%7D(%5Cfrac%7Bm%7D%7B%5Cleft%7Cs1%5Cright%7C%7D%2B%5Cfrac%7Bm%7D%7B%5Cleft%7Cs2%5Cright%7C%7D%2B%5Cfrac%7Bm-t%7D%7Bm%7D)%26%5Ctext%7Bothers%7D%5Cend%7Bcases%7D)
+$$
+\begin{cases}
+0 & {\text{if } m=0} \\
+\frac{1}{3}\left(\frac{m}{\left|s_1\right|}+\frac{m}{\left|s_2\right|}+\frac{m-t}{m}\right) & \text{others}
+\end{cases}
+$$
 
 where
 
@@ -63,7 +68,13 @@ where
 
 With Adjusting Table:
 
-![adj](https://chart.googleapis.com/chart?cht=tx&chs&chl=%5Cbegin%7Bcases%7D0%26%5Ctext%7Bif%20%7Dm%3D0%5C%5C%5Cfrac%7B1%7D%7B3%7D(%5Cfrac%7B%5Cfrac%7Bs%7D%7B10%7D%2Bm%7D%7B%5Cleft%7Cs1%5Cright%7C%7D%2B%5Cfrac%7B%5Cfrac%7Bs%7D%7B10%7D%2Bm%7D%7B%5Cleft%7Cs2%5Cright%7C%7D%2B%5Cfrac%7Bm-t%7D%7Bm%7D)%26%5Ctext%7Bothers%7D%5Cend%7Bcases%7D)
+$$
+\begin{cases}
+0 & \text{if } m=0 \\
+\frac{1}{3}\left(\frac{\frac{s}{10}+m}{\left|s_1\right|}+\frac{\frac{s}{10}+m}{\left|s_2\right|}+\frac{m-t}{m}\right) & \text{others}
+\end{cases}
+$$
+
 
 where
 
