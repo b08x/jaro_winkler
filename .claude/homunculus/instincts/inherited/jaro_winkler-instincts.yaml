@@ -1,0 +1,366 @@
+# Instincts generated from https://github.com/b08x/jaro_winkler
+# Generated: 2026-05-27T23:18:54.182Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: jaro_winkler-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/b08x/jaro_winkler
+---
+
+# Jaro_winkler Commit Length
+
+## Action
+
+Keep commit messages concise (~47 characters)
+
+## Evidence
+
+- Average commit message length: 47 chars
+- Based on 9 commits
+
+---
+id: jaro_winkler-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/jaro_winkler
+---
+
+# Jaro_winkler Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: jaro_winkler-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/jaro_winkler
+---
+
+# Jaro_winkler Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: jaro_winkler-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/jaro_winkler
+---
+
+# Jaro_winkler Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: jaro_winkler-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/b08x/jaro_winkler
+---
+
+# Jaro_winkler Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: jaro_winkler-workflow-version-bump-and-changelog-update
+trigger: "when doing version bump and changelog update"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/jaro_winkler
+---
+
+# Jaro_winkler Workflow Version Bump And Changelog Update
+
+## Action
+
+Follow the version-bump-and-changelog-update workflow:
+1. Update the version number in lib/jaro_winkler/version.rb
+2. Add or update the relevant entry in CHANGELOG.md
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: lib/jaro_winkler/version.rb, CHANGELOG.md
+
+---
+id: jaro_winkler-workflow-merge-pull-request
+trigger: "when doing merge pull request"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/jaro_winkler
+---
+
+# Jaro_winkler Workflow Merge Pull Request
+
+## Action
+
+Follow the merge-pull-request workflow:
+1. Merge the branch into main
+2. Include all files changed in the PR (could be code, CI, docs, etc.)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: .github/workflows/test.yml, ext/jaro_winkler/extconf.rb, ext/jaro_winkler/jaro.c
+
+---
+id: jaro_winkler-instinct-filename-camelcase
+trigger: "When creating or renaming a file in the codebase."
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Filename Camelcase
+
+## Action
+
+Use camelCase for file names.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- lib/jaro_winkler/version.rb
+
+---
+id: jaro_winkler-instinct-function-camelcase
+trigger: "When defining a function."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Function Camelcase
+
+## Action
+
+Use camelCase for function names.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: jaro_winkler-instinct-class-pascalcase
+trigger: "When defining a class."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Class Pascalcase
+
+## Action
+
+Use PascalCase for class names.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: jaro_winkler-instinct-constant-screaming-snake-case
+trigger: "When defining a constant."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Constant Screaming Snake Case
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: jaro_winkler-instinct-import-relative
+trigger: "When importing modules in Ruby code."
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Import Relative
+
+## Action
+
+Use relative import paths.
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: jaro_winkler-instinct-export-named
+trigger: "When exporting modules or functions."
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Export Named
+
+## Action
+
+Use named exports.
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: jaro_winkler-instinct-test-location-separate
+trigger: "When adding or updating tests."
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Test Location Separate
+
+## Action
+
+Place test files in a separate directory from source code.
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: jaro_winkler-instinct-commit-prefix
+trigger: "When writing a commit message."
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Commit Prefix
+
+## Action
+
+Prefix the commit message with chore:, feat:, or ci: as appropriate.
+
+## Evidence
+
+- feat: Use `append_cflags` instead of `CFLAGS` environment varaible
+- ci: update strategy matrix
+- chore: bump version to v1.6.1
+
+---
+id: jaro_winkler-instinct-commit-length
+trigger: "When composing a commit message."
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, averaging around 47 characters.
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: jaro_winkler-instinct-version-bump-changelog
+trigger: "When a new release is prepared following new features or bugfixes."
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Version Bump Changelog
+
+## Action
+
+Update the version number in lib/jaro_winkler/version.rb and add or update the relevant entry in CHANGELOG.md.
+
+## Evidence
+
+- Workflow: version-bump-and-changelog-update
+- Commits: chore: bump version to v1.6.1, chore: bump version to 1.7.0
+
+---
+id: jaro_winkler-instinct-merge-pull-request
+trigger: "When a pull request is approved and merged into the main branch."
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: b08x/jaro_winkler
+---
+
+# Jaro_winkler Instinct Merge Pull Request
+
+## Action
+
+Merge the branch into main and include all files changed in the PR (could be code, CI, docs, etc.).
+
+## Evidence
+
+- Workflow: merge-pull-request
+- Commits: Merge pull request #63 from jvcarli/fix-msvc-build, Merge pull request #64 from yasulab/patch-1
+
